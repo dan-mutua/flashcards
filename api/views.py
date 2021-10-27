@@ -32,3 +32,21 @@ def taskDetail(request,pk):
   assignments=Assignment.objects.get(id=pk)
   serializer=AssignmentSerializer(assignments,many=False) 
   return Response(serializer.data) 
+
+
+@api_view(['POST'])
+def taskCreate(request):
+  serializer=AssignmentSerializer(data=request.data)
+  if serializer.is_valid():
+    serializer.save()
+
+  return Response(serializer.data) 
+
+@api_view(['POST'])
+def taskUpdate(request,pk):
+  assignments=Assignment.objects.get(id=pk)
+  serializer=AssignmentSerializer(instance=assignments, data=request.data)
+  if serializer.is_valid():
+    serializer.save()
+    
+  return Response(serializer.data)   

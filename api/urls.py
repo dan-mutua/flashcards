@@ -8,4 +8,5 @@ urlpatterns = [
   path('task-detail/<str:pk>/', views.taskDetail, name='taskdetail'),
   path('task-create/', views.taskCreate, name='taskcreate'),
   path('task-update/', views.taskUpdate, name='taskupdate'),
+  path('task-delete/', views.taskDelete, name='taskdelete'),
 ]

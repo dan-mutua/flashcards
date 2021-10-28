@@ -20,7 +20,7 @@ class RegisterAPIView(GenericAPIView):
 
 
 
-class ListAPIView(GenericAPIView):
+class LoginAPIView(GenericAPIView):
 
   serializer_class=LoginSerializer 
 

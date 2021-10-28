@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'users',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
